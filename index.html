@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    
+    <section>
+        <form method="get" autocomplete="off" id="form">
+            <h1>Insira seus dados</h1>
+            <div id="input_grupo">
+                <p><input type="text" name="nome" id="nome" class="enter" placeholder="Digite seu nome" autofocus oninput="ValidarNome()">
+                </p>
+                <span class="erro">Nome deve ter no mínimo 4 caracteres</span>
+
+                <p><input type="text" name="nome" id="sobrenome" class="enter" placeholder="Digite seu sobrenome" oninput="ValidarSobrenome()"></p>
+                <span class="erro">Sobrenome deve ter no mínimo 4 caracteres</span>
+
+                <p><input type="email" name="email" id="email" class="enter" placeholder="Digite seu email" oninput="ValidarEmail()"></p>
+                <span class="erro">Digite um email válido</span>
+
+                <p><input type="password" name="senha" id="senha" class="enter" placeholder="Senha" mix="8" oninput="ValidarSenha()"></p>
+                <span class="erro">Senha deve ter no mínimo 8 caracteres</span>
+
+                <p><input type="password" name="senha" id="confsenha" class="enter" placeholder="Confirmar senha" oninput="ValidarSenha2()"></p>
+                <span class="erro">Senhas diferentes. Confirme sua senha.</span>
+
+            </div>
+            <div id="ps">
+                <p>País:
+                    <select name="pais" id="pais" onmouseenter="paises()">
+                        <option value="AO">Angola</option>
+                        <option value="PT">Portugal</option>
+                        <option value="MZ">Moçambique</option>
+                    </select></p>
+                    <div id="radio">
+                        <p>Sexo:
+                            <input type="radio" name="sexo" id="sexom" checked> <label for="sexom">Masculino</label>
+                            <input type="radio" name="sexo" id="sexof"> <label for="sexof">Feminino</label>
+                            <input type="radio" name="sexo" id="outro"> <label for="outro">Prefiro não dizer</label>
+                        </p>
+                    </div>
+                    
+            </div>
+            <p id="dica">
+                "Por favor diz-nos em que intervalo está a sua idade."
+            </p>
+            <div id="check">
+                <p>
+                    <input type="radio" name="idade" id="a" checked> <label for="a">15 à 18</label>
+                </p>
+                <p>
+                    <input type="radio" name="idade" id="b"> <label for="b">19 à 25</label>
+                </p>
+                <p>
+                    <input type="radio" name="idade" id="c"> <label for="c">26 à 34</label>
+                </p>
+                <p>
+                    <input type="radio" name="idade" id="d"> <label for="d">35 à 50</label>
+                </p>
+                <p>
+                    <input type="radio" name="idade" id="e"> <label for="e">51 à 60</label>
+                </p>
+                <p>
+                    <input type="radio" name="idade" id="f"> <label for="f">61 à 80</label>
+                </p>
+            </div>
+            <div id="btn">
+                <div class="bt">
+                    <input type="submit" value="Enviar">
+                </div>
+                <div class="bt">
+                    <input type="reset" value="Limpar Tudo">
+                </div>
+            </div>
+        </form>
+    </section>
+<script src="eventos.js"></script>
+</body>
+    
+</html>
